@@ -563,8 +563,9 @@ namespace Firma_Bilgi_Bankasi
                     // We are ready, now lets cleanup and close our connection:
                     sqlite_conn.Close();
 
-                    MessageBox.Show("İşlem başarı ile tamamlandı.", "Tamamlanan İşlem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     temizle();
+                    MessageBox.Show("İşlem başarı ile tamamlandı.", "Tamamlanan İşlem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
                 else
                 {

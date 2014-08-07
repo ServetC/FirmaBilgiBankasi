@@ -96,6 +96,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._25;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(385, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 67);

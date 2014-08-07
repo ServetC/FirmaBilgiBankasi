@@ -103,6 +103,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.ForeColor = System.Drawing.Color.Blue;
             this.textBox2.Location = new System.Drawing.Point(124, 55);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(219, 22);
@@ -111,6 +112,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.Color.Blue;
             this.textBox1.Location = new System.Drawing.Point(124, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 22);
@@ -155,6 +157,7 @@
             // button3
             // 
             this.button3.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._35;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.Location = new System.Drawing.Point(124, 95);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(219, 63);
@@ -166,6 +169,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.ForeColor = System.Drawing.Color.Blue;
             this.textBox7.Location = new System.Drawing.Point(124, 67);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(219, 22);
@@ -174,6 +178,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.ForeColor = System.Drawing.Color.Blue;
             this.textBox6.Location = new System.Drawing.Point(124, 30);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(219, 22);
@@ -216,6 +221,7 @@
             // button2
             // 
             this.button2.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._50;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.Location = new System.Drawing.Point(124, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 54);
@@ -227,6 +233,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.ForeColor = System.Drawing.Color.Blue;
             this.textBox5.Location = new System.Drawing.Point(124, 26);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(219, 22);
@@ -258,6 +265,7 @@
             // button1
             // 
             this.button1.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._30;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(124, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 54);
@@ -283,6 +291,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.ForeColor = System.Drawing.Color.Blue;
             this.textBox4.Location = new System.Drawing.Point(107, 43);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(219, 21);
@@ -291,6 +300,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.ForeColor = System.Drawing.Color.Blue;
             this.textBox3.Location = new System.Drawing.Point(107, 18);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(219, 21);
@@ -325,9 +335,9 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBoxSil);
             this.Controls.Add(this.groupBoxDuzenle);
             this.Controls.Add(this.groupBoxEkle);
+            this.Controls.Add(this.groupBoxSil);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(407, 368);

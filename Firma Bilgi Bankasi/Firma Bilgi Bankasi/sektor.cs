@@ -18,6 +18,79 @@ namespace Firma_Bilgi_Bankasi
             InitializeComponent();
         }
 
+        void sektorgostersil()
+        {
+            listBox2.Items.Clear();
+            sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+
+            sqlite_conn.Open();
+
+            sqlite_cmd = sqlite_conn.CreateCommand();
+
+
+            sqlite_cmd.CommandText = "SELECT * FROM sektor order by adi asc";
+
+
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+
+            while (sqlite_datareader.Read())
+            {
+                listBox2.Items.Add(sqlite_datareader["adi"].ToString());
+            }
+
+            sqlite_conn.Close();
+        
+        }
+
+        void sektorgosterekle()
+        {
+            listBox1.Items.Clear();
+
+            sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+
+            sqlite_conn.Open();
+
+            sqlite_cmd = sqlite_conn.CreateCommand();
+
+            sqlite_cmd.CommandText = "SELECT * FROM sektor order by adi asc";
+
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+            listBox1.Items.Clear();
+
+            while (sqlite_datareader.Read())
+            {
+                listBox1.Items.Add(sqlite_datareader.GetString(1));
+            }
+            sqlite_conn.Close();
+
+        }
+
+        void sektorgosterguncelle()
+        {
+            listBox3.Items.Clear();
+
+            sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+
+            sqlite_conn.Open();
+
+            sqlite_cmd = sqlite_conn.CreateCommand();
+
+            sqlite_cmd.CommandText = "SELECT * FROM sektor order by adi asc";
+
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+            listBox1.Items.Clear();
+
+            while (sqlite_datareader.Read())
+            {
+                listBox3.Items.Add(sqlite_datareader.GetString(1));
+            }
+            sqlite_conn.Close();
+
+        }
+
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
             if(comboBox1.Text=="Sektör Ekle")
@@ -30,24 +103,8 @@ namespace Firma_Bilgi_Bankasi
                 textBox1.Text = "";
                 textBox1.Focus();
 
-
-                sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-
-                sqlite_conn.Open();
-
-                sqlite_cmd = sqlite_conn.CreateCommand();
-
-                sqlite_cmd.CommandText = "SELECT * FROM sektor order by adi asc";
-
-                sqlite_datareader = sqlite_cmd.ExecuteReader();
-
-                listBox1.Items.Clear();
-
-                while (sqlite_datareader.Read())
-                {
-                    listBox1.Items.Add(sqlite_datareader.GetString(1));
-                }
-                sqlite_conn.Close();
+                sektorgosterekle();
+                
             }
            
             else if (comboBox1.Text == "Sektör Güncelle")
@@ -55,11 +112,13 @@ namespace Firma_Bilgi_Bankasi
                 groupBox1.Visible = false;
                 groupBox3.Visible = true;
                 groupBox2.Visible = false;
-                this.MaximumSize = new Size(378, 290);
-                this.MinimumSize = new Size(378, 290);
-                textBox2.Text = "";
+                this.MaximumSize = new Size(378, 350);
+                this.MinimumSize = new Size(378, 350);
+        
                 textBox3.Text = "";
-                textBox2.Focus();
+                listBox3.Focus();
+
+                sektorgosterguncelle();
             }
 
             else if (comboBox1.Text == "Sektör Sil")
@@ -68,10 +127,13 @@ namespace Firma_Bilgi_Bankasi
                 groupBox1.Visible = false;
                 groupBox3.Visible = false;
 
-                this.MaximumSize = new Size(378, 183);
-                this.MinimumSize = new Size(378, 183);
-                textBox4.Text = "";
-                textBox4.Focus();
+                this.MaximumSize = new Size(378, 350);
+                this.MinimumSize = new Size(378, 350);
+                
+                listBox2.Focus();
+
+                sektorgostersil();
+                
             }
             else
             {
@@ -141,6 +203,7 @@ namespace Firma_Bilgi_Bankasi
                         textBox1.Text = "";
                         textBox1.Focus();
 
+                        sektorgosterekle();
                     }
                     else
                     {
@@ -167,11 +230,11 @@ namespace Firma_Bilgi_Bankasi
         {
             if(comboBox1.Text=="Sektör Güncelle")
             {
-                if(textBox2.Text!="" && textBox3.Text!="")
+                if(listBox3.SelectedItem!=null && textBox3.Text!="")
                 {
                     int kontrol = 0,tkontrol=0;
                     string sektorismi,dsektorismi,ysektorismi;
-                    sektorismi = textBox2.Text.ToUpper();
+                    sektorismi = listBox3.SelectedItem.ToString();
                     ysektorismi=textBox3.Text.ToUpper();
                   
                     sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
@@ -180,13 +243,10 @@ namespace Firma_Bilgi_Bankasi
 
                     sqlite_cmd = sqlite_conn.CreateCommand();
 
-                  
                     sqlite_cmd.CommandText = "SELECT * FROM sektor";
 
-                    
                     sqlite_datareader = sqlite_cmd.ExecuteReader();
 
-                   
                     while (sqlite_datareader.Read()) 
                     {
                         dsektorismi = sqlite_datareader.GetString(1);
@@ -200,19 +260,15 @@ namespace Firma_Bilgi_Bankasi
                     }
                     if (kontrol == 1)
                     {
-
                         sqlite_conn.Close();
 
                         sqlite_conn.Open();
 
                         sqlite_cmd = sqlite_conn.CreateCommand();
 
-
                         sqlite_cmd.CommandText = "SELECT * FROM sektor";
 
-
                         sqlite_datareader = sqlite_cmd.ExecuteReader();
-
 
                         while (sqlite_datareader.Read())
                         {
@@ -240,9 +296,11 @@ namespace Firma_Bilgi_Bankasi
 
                             sqlite_conn.Close();
 
-                            textBox2.Text = "";
                             textBox3.Text = "";
-                            textBox2.Focus();
+                            
+                            listBox3.Focus();
+
+                            sektorgosterguncelle();
                         }
                         else
                         {
@@ -254,25 +312,12 @@ namespace Firma_Bilgi_Bankasi
                             textBox3.Focus();
                         }
 
-
-
-
-                        
-                    }
-                    else
-                    {
-                        sqlite_conn.Close();
-
-                        MessageBox.Show("Girilen sektör ismi mevcut değildir. Kontrol edin.", "İşlem Hatası", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        textBox2.Text = "";
-                        textBox2.Focus();
-
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Sektör ismi girilmemiştir. Kontrol edin.","İşlem Hatası",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    textBox2.Focus();
+                    MessageBox.Show("Sektör ismi seçilmemiştir. Kontrol edin.","İşlem Hatası",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    listBox3.Focus();
 
                 }
 
@@ -281,11 +326,11 @@ namespace Firma_Bilgi_Bankasi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(textBox4.Text!="")
+            if(listBox2.SelectedItem != null)
             {
                 string sektorismi;
                 int kontrol = 0,tkontrol = 0;
-                sektorismi = textBox4.Text.ToUpper();
+                sektorismi = listBox2.SelectedItem.ToString();
 
                 sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
 
@@ -349,31 +394,29 @@ namespace Firma_Bilgi_Bankasi
 
                         sqlite_conn.Close();
 
+                        sektorgostersil();
+
                         MessageBox.Show("Sektör başarılı bir şekilde silindi.","İşlem Tamam",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        textBox4.Text = "";
-                        textBox4.Focus();
+                        listBox2.SelectedItem = null;
+                        listBox2.Focus();
+
+                       
 
                     }
                     else
                     {
                         sqlite_conn.Close();
                         MessageBox.Show("Sektör kullanılmaktadır. Silinemez.","Erişim Engellendi",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        textBox4.Text = "";
-                        textBox4.Focus();
+                        listBox2.SelectedItem = null;
+                        listBox2.Focus();
                     }
 
-                }
-                else
-                {
-                    MessageBox.Show("Girilen kayıt mevcut değildir. Kontrol edin.","Mevcut Olmayan Kayıt",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    textBox4.Text = "";
-                    textBox4.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("Boş kayıt. Kontrol edin.","Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                textBox4.Focus();
+                listBox2.Focus();
             }
         }
     }

@@ -14,6 +14,19 @@ C:\Users\serve_000\Desktop\Firma-Bilgi-Bankasi\Firma Bilgi Bankasi\Firma Bilgi B
 C:\Users\serve_000\Desktop\Firma-Bilgi-Bankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.guncelle.resources
 C:\Users\serve_000\Desktop\Firma-Bilgi-Bankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.sil.resources
 C:\Users\serve_000\Desktop\Firma-Bilgi-Bankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.ara.resources
-C:\Users\serve_000\Documents\GitHub\FirmaBilgiBankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\bin\Debug\Firma Bilgi Bankasi.exe.config
-C:\Users\serve_000\Documents\GitHub\FirmaBilgiBankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.exe
-C:\Users\serve_000\Documents\GitHub\FirmaBilgiBankasi\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.pdb
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\bin\Debug\Firma Bilgi Bankasi.exe.config
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.exe
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.pdb
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\bin\Debug\Firma Bilgi Bankasi.exe
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\bin\Debug\Firma Bilgi Bankasi.pdb
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.csprojResolveAssemblyReference.cache
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.ara.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.Form1.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.Form2.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.giris.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.guncelle.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.kaydet.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.Properties.Resources.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.sektor.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma_Bilgi_Bankasi.sil.resources
+C:\Users\serve_000\Desktop\sektor değiştirlmiş\Firma Bilgi Bankasi\Firma Bilgi Bankasi\obj\Debug\Firma Bilgi Bankasi.csproj.GenerateResource.Cache
