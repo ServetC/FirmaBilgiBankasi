@@ -36,6 +36,7 @@ namespace Firma_Bilgi_Bankasi
                 textBox5.Text = "";
                 textBox6.Text = "";
                 textBox7.Text = "";
+                textBox1.Focus();
 
             }
             else if (comboBox1.Text == "Kullanıcı Sil")
@@ -55,7 +56,7 @@ namespace Firma_Bilgi_Bankasi
                 textBox5.Text = "";
                 textBox6.Text = "";
                 textBox7.Text = "";
-              
+                textBox1.Focus();
 
             }
             else if (comboBox1.Text == "Kullanıcı Düzenle")
@@ -74,7 +75,7 @@ namespace Firma_Bilgi_Bankasi
                 textBox5.Text = "";
                 textBox6.Text = "";
                 textBox7.Text = "";
-           
+                textBox1.Focus();
                
                
             }

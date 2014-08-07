@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(giris));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -153,11 +154,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(124, 104);
+            this.button3.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._35;
+            this.button3.Location = new System.Drawing.Point(124, 95);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 54);
+            this.button3.Size = new System.Drawing.Size(219, 63);
             this.button3.TabIndex = 6;
             this.button3.Text = "Ekle";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -212,11 +215,13 @@
             // 
             // button2
             // 
+            this.button2.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._50;
             this.button2.Location = new System.Drawing.Point(124, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 54);
             this.button2.TabIndex = 2;
             this.button2.Text = "Sil";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -252,11 +257,13 @@
             // 
             // button1
             // 
+            this.button1.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._30;
             this.button1.Location = new System.Drawing.Point(124, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 54);
             this.button1.TabIndex = 2;
             this.button1.Text = "Kaydet";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -315,12 +322,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(391, 329);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxSil);
             this.Controls.Add(this.groupBoxDuzenle);
             this.Controls.Add(this.groupBoxEkle);
-            this.Controls.Add(this.groupBoxSil);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(407, 368);
             this.MinimizeBox = false;

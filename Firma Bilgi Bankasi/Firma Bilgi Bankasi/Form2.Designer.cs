@@ -62,6 +62,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.ForeColor = System.Drawing.Color.Blue;
             this.button8.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._8;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(109, 139);
@@ -75,6 +76,7 @@
             // 
             // button7
             // 
+            this.button7.ForeColor = System.Drawing.Color.Blue;
             this.button7.Image = global::Firma_Bilgi_Bankasi.Properties.Resources.picture_delete_icon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(467, 139);
@@ -88,6 +90,7 @@
             // 
             // button6
             // 
+            this.button6.ForeColor = System.Drawing.Color.Blue;
             this.button6.Image = global::Firma_Bilgi_Bankasi.Properties.Resources.login_icon;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(288, 139);
@@ -101,6 +104,7 @@
             // 
             // button4
             // 
+            this.button4.ForeColor = System.Drawing.Color.Blue;
             this.button4.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._6;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(563, 37);
@@ -114,6 +118,7 @@
             // 
             // button3
             // 
+            this.button3.ForeColor = System.Drawing.Color.Blue;
             this.button3.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._5;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(384, 37);
@@ -127,6 +132,7 @@
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.Color.Blue;
             this.button2.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._4;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(205, 37);
@@ -140,6 +146,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Blue;
             this.button1.Image = global::Firma_Bilgi_Bankasi.Properties.Resources._3;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(26, 37);
@@ -169,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(785, 522);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(801, 561);
             this.MinimumSize = new System.Drawing.Size(801, 561);

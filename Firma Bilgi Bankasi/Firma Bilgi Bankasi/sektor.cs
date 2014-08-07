@@ -24,9 +24,11 @@ namespace Firma_Bilgi_Bankasi
             {
                 groupBox1.Visible = true;
                 groupBox3.Visible = false;
+                groupBox2.Visible = false;
                 this.MaximumSize = new Size(378, 350);
                 this.MinimumSize = new Size(378, 350);
                 textBox1.Text = "";
+                textBox1.Focus();
 
 
                 sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
@@ -52,10 +54,24 @@ namespace Firma_Bilgi_Bankasi
             {
                 groupBox1.Visible = false;
                 groupBox3.Visible = true;
+                groupBox2.Visible = false;
                 this.MaximumSize = new Size(378, 290);
                 this.MinimumSize = new Size(378, 290);
                 textBox2.Text = "";
                 textBox3.Text = "";
+                textBox2.Focus();
+            }
+
+            else if (comboBox1.Text == "Sektör Sil")
+            {
+                groupBox2.Visible = true;
+                groupBox1.Visible = false;
+                groupBox3.Visible = false;
+
+                this.MaximumSize = new Size(378, 183);
+                this.MinimumSize = new Size(378, 183);
+                textBox4.Text = "";
+                textBox4.Focus();
             }
             else
             {
@@ -260,6 +276,104 @@ namespace Firma_Bilgi_Bankasi
 
                 }
 
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(textBox4.Text!="")
+            {
+                string sektorismi;
+                int kontrol = 0,tkontrol = 0;
+                sektorismi = textBox4.Text.ToUpper();
+
+                sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+
+                sqlite_conn.Open();
+
+                sqlite_cmd = sqlite_conn.CreateCommand();
+
+
+                sqlite_cmd.CommandText = "SELECT * FROM sektor";
+
+
+                sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+
+                while (sqlite_datareader.Read())
+                {
+                    if (sektorismi == sqlite_datareader["adi"].ToString())
+                    {
+                        kontrol = 1;
+                        break;
+                    }
+                    else kontrol = 0;
+                }
+                sqlite_conn.Close();
+
+                if(kontrol==1)
+                {
+                    sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+
+                    sqlite_conn.Open();
+
+                    sqlite_cmd = sqlite_conn.CreateCommand();
+
+
+                    sqlite_cmd.CommandText = "Select Firma_id From Firma_has_Sektor where Sektor_id=(SELECT id FROM sektor where adi='" + sektorismi + "')";
+
+
+                    sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+                    while (sqlite_datareader.Read())
+                    {
+                        if(sqlite_datareader["Firma_id"]!=null)
+                        {
+                            tkontrol=1;
+                            break;
+                        }
+                        else tkontrol=0;
+                    }
+                    if(tkontrol==0)
+                    {
+                        sqlite_conn.Close();
+
+
+                        sqlite_conn.Open();
+
+                        sqlite_cmd = sqlite_conn.CreateCommand();
+
+                        sqlite_cmd.CommandText = "Delete From sektor where adi='" + sektorismi + "'";
+
+                        sqlite_cmd.ExecuteNonQuery();
+
+                        sqlite_conn.Close();
+
+                        MessageBox.Show("Sektör başarılı bir şekilde silindi.","İşlem Tamam",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        textBox4.Text = "";
+                        textBox4.Focus();
+
+                    }
+                    else
+                    {
+                        sqlite_conn.Close();
+                        MessageBox.Show("Sektör kullanılmaktadır. Silinemez.","Erişim Engellendi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        textBox4.Text = "";
+                        textBox4.Focus();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Girilen kayıt mevcut değildir. Kontrol edin.","Mevcut Olmayan Kayıt",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    textBox4.Text = "";
+                    textBox4.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Boş kayıt. Kontrol edin.","Kayıt Hatası",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                textBox4.Focus();
             }
         }
     }
