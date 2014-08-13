@@ -34,7 +34,7 @@ namespace Firma_Bilgi_Bankasi
         {
             Form1 frm = new Form1();
             this.Hide();
-            frm.ShowDialog();
+            frm.Show();
             
         }
 

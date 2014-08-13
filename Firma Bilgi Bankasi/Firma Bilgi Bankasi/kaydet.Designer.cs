@@ -55,7 +55,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -300,7 +299,6 @@
             this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.listBox1);
             this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.Location = new System.Drawing.Point(428, 74);
             this.groupBox3.Name = "groupBox3";
@@ -321,21 +319,11 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(45, 21);
+            this.textBox4.Location = new System.Drawing.Point(17, 21);
             this.textBox4.MaxLength = 150;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 22);
+            this.textBox4.Size = new System.Drawing.Size(189, 22);
             this.textBox4.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Adı";
             // 
             // listBox3
             // 
@@ -679,7 +667,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.ListBox listBox4;
