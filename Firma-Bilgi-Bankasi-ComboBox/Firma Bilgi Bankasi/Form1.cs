@@ -22,11 +22,14 @@ namespace Firma_Bilgi_Bankasi
         {
             Application.Exit();
         }
+
         public static string giriskadi, girissifre;
         string girisdkadi, girisdsifre;
         SQLiteConnection sqlite_conn;
         SQLiteCommand sqlite_cmd;
         SQLiteDataReader sqlite_datareader;
+        Form2 frm = new Form2();
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -67,16 +70,19 @@ namespace Firma_Bilgi_Bankasi
                 }
                 if (kontrol == 1)
                 {
-                    Form2 frm = new Form2();
+                    
                     frm.Show();
                     this.Hide();
                 }
                 else
                 {
+                    
                     MessageBox.Show("Kullanıcı Adı ya da Şifre hatalı. Girilen değerleri kontrol edin...", "Hatalı Giriş İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox1.Focus();
+                    
+                    
                 }
               
                 sqlite_conn.Close();

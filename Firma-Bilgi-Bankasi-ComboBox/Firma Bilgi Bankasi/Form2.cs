@@ -20,21 +20,21 @@ namespace Firma_Bilgi_Bankasi
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Form girisfrm = new giris();
             girisfrm.ShowDialog();
-            
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
+            frm.Show();
             this.Hide();
-            frm.ShowDialog();
+            
             
         }
 
@@ -67,6 +67,11 @@ namespace Firma_Bilgi_Bankasi
         {
             ara araform = new ara();
             araform.ShowDialog();
+        }
+
+        private void Form2_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
        
